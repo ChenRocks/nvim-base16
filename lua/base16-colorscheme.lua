@@ -145,7 +145,7 @@ function M.setup(colors, config)
     hi.Debug                              = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.Directory                          = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
     hi.Error                              = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
-    hi.ErrorMsg                           = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.ErrorMsg                           = { guifg = M.colors.base0F, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.Exception                          = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.FoldColumn                         = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.Folded                             = { guifg = M.colors.base03, guibg = M.colors.base01, gui = nil, guisp = nil }
@@ -163,7 +163,7 @@ function M.setup(colors, config)
     hi.Underlined                         = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.Visual                             = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
     hi.VisualNOS                          = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-    hi.WarningMsg                         = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+    hi.WarningMsg                         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.WildMenu                           = { guifg = M.colors.base08, guibg = M.colors.base0A, gui = nil, guisp = nil }
     hi.Title                              = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
     hi.Conceal                            = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
@@ -256,8 +256,8 @@ function M.setup(colors, config)
     hi.SpellCap                           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0D }
     hi.SpellRare                          = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0E }
 
-    hi.DiagnosticError                    = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
-    hi.DiagnosticWarn                     = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticError                    = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
+    hi.DiagnosticWarn                     = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
     hi.DiagnosticInfo                     = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
     hi.DiagnosticHint                     = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
     hi.DiagnosticUnderlineError           = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base08 }
