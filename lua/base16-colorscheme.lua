@@ -266,9 +266,13 @@ function M.setup(colors, config)
     hi.DiagnosticUnderlineInformation     = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0F }
     hi.DiagnosticUnderlineHint            = { guifg = nil, guibg = nil, gui = 'undercurl', guisp = M.colors.base0C }
 
-    hi.LspReferenceText                   = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-    hi.LspReferenceRead                   = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
-    hi.LspReferenceWrite                  = { guifg = nil, guibg = nil, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceText                   = { guifg = nil, guibg = M.colors.base02, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceRead                   = { guifg = nil, guibg = M.colors.base02, gui = 'underline', guisp = M.colors.base04 }
+    hi.LspReferenceWrite                  = { guifg = nil, guibg = M.colors.base02, gui = 'underline', guisp = M.colors.base04 }
+
+    hi.LspCodeLens = { fg = M.colors.base03, fmt = 'italic' }
+    hi.LspCodeLensSeparator = { fg = M.colors.base03 }
+
     hi.LspDiagnosticsDefaultError         = 'DiagnosticError'
     hi.LspDiagnosticsDefaultWarning       = 'DiagnosticWarn'
     hi.LspDiagnosticsDefaultInformation   = 'DiagnosticInfo'
@@ -508,35 +512,35 @@ function M.setup(colors, config)
     end
 
     if M.config.cmp then
-        hi.CmpDocumentationBorder   = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-        hi.CmpDocumentation         = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+        hi.CmpDocumentationBorder   = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
+        hi.CmpDocumentation         = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
         hi.CmpItemAbbr              = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
         hi.CmpItemAbbrDeprecated    = { guifg = M.colors.base03, guibg = nil, gui = 'strikethrough', guisp = nil }
-        hi.CmpItemAbbrMatch         = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindDefault       = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemAbbrMatch         = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0C, guibg = nil, gui = "underline", guisp = nil }
+        hi.CmpItemKindDefault       = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil, fmt="reverse" }
         hi.CmpItemMenu              = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindKeyword       = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindVariable      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindKeyword       = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindVariable      = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindConstant      = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindReference     = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindReference     = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindValue         = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindFunction      = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindMethod        = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindConstructor   = { guifg = M.colors.base0D, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindClass         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindInterface     = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindStruct        = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindInterface     = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindStruct        = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindEvent         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindEnum          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindUnit          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindModule        = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindProperty      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindField         = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindTypeParameter = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindEnum          = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindUnit          = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindModule        = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindProperty      = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindField         = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindTypeParameter = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindEnumMember    = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindOperator      = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil }
-        hi.CmpItemKindSnippet       = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindOperator      = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemKindSnippet       = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     end
 
     if M.config.illuminate then
@@ -558,19 +562,19 @@ function M.setup(colors, config)
         hi['@decorator'] = 'Identifier'
 
         -- TODO: figure out what these should be
-        -- hi['@lsp.type.namespace'] = '@namespace'
-        -- hi['@lsp.type.type'] = '@type'
+        hi['@lsp.type.namespace'] = 'TSNamespace'
+        hi['@lsp.type.type'] = 'TSType'
         -- hi['@lsp.type.class'] = '@type'
-        -- hi['@lsp.type.enum'] = '@type'
-        -- hi['@lsp.type.interface'] = '@type'
+        hi['@lsp.type.enum'] = 'TSType'
+        hi['@lsp.type.interface'] = 'TSType'
         -- hi['@lsp.type.struct'] = '@structure'
-        -- hi['@lsp.type.parameter'] = '@parameter'
-        -- hi['@lsp.type.variable'] = '@variable'
-        -- hi['@lsp.type.property'] = '@property'
-        -- hi['@lsp.type.enumMember'] = '@constant'
+        hi['@lsp.type.parameter'] = 'TSParame'
+        hi['@lsp.type.variable'] = 'TSVariable'
+        hi['@lsp.type.property'] = 'TSProperty'
+        hi['@lsp.type.enumMember'] = 'TSConstBuiltin'
         -- hi['@lsp.type.function'] = '@function'
-        -- hi['@lsp.type.method'] = '@method'
-        -- hi['@lsp.type.macro'] = '@macro'
+        hi['@lsp.type.method'] = 'TSMethod'
+        hi['@lsp.type.macro'] = 'TSFuncMacro'
         -- hi['@lsp.type.decorator'] = '@function'
     end
 
