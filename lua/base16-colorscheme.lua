@@ -459,15 +459,19 @@ function M.setup(colors, config)
             hi.TelescopeSelection    = { guifg = nil, guibg = darkerstatusline, gui = nil, guisp = nil }
             hi.TelescopePreviewLine  = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
         else
-            hi.TelescopeBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-            hi.TelescopePromptBorder = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopeBorder       = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopePromptBorder = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopeResultsBorder = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopePreviewBorder = { guifg = M.colors.base0C, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopeMatching = { guifg = M.colors.base09, guibg = M.colors.base00, gui = "bold", guisp = nil }
             hi.TelescopePromptNormal = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-            hi.TelescopePromptPrefix = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopePromptPrefix = { guifg = M.colors.base0B, guibg = M.colors.base00, gui = nil, guisp = nil }
             hi.TelescopeNormal       = { guifg = nil, guibg = M.colors.base00, gui = nil, guisp = nil }
-            hi.TelescopePreviewTitle = { guifg = M.colors.base01, guibg = M.colors.base0B, gui = nil, guisp = nil }
-            hi.TelescopePromptTitle  = { guifg = M.colors.base01, guibg = M.colors.base08, gui = nil, guisp = nil }
-            hi.TelescopeResultsTitle = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-            hi.TelescopeSelection    = { guifg = nil, guibg = M.colors.base01, gui = nil, guisp = nil }
+            hi.TelescopePreviewTitle = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopePromptTitle  = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopeResultsTitle = { guifg = M.colors.base08, guibg = M.colors.base00, gui = nil, guisp = nil }
+            hi.TelescopeSelection    = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
+            hi.TelescopeSelectionCaret    = { guifg = M.colors.base0A, guibg = M.colors.base00, gui = nil, guisp = nil }
             hi.TelescopePreviewLine  = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
         end
     end
