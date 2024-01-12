@@ -164,7 +164,7 @@ function M.setup(colors, config)
     hi.Visual                             = { guifg = nil, guibg = M.colors.base02, gui = nil, guisp = nil }
     hi.VisualNOS                          = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.WarningMsg                         = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
-    hi.WildMenu                           = { guifg = M.colors.base08, guibg = M.colors.base0A, gui = nil, guisp = nil }
+    hi.WildMenu                           = { guifg = M.colors.base00, guibg = M.colors.base0D, gui = nil, guisp = nil }
     hi.Title                              = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
     hi.Conceal                            = { guifg = M.colors.base0D, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.Cursor                             = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil }
@@ -182,7 +182,9 @@ function M.setup(colors, config)
     hi.CursorLineNr                       = { guifg = M.colors.base04, guibg = M.colors.base01, gui = nil, guisp = nil }
     hi.QuickFixLine                       = { guifg = nil, guibg = M.colors.base01, gui = 'none', guisp = nil }
     hi.PMenu                              = { guifg = M.colors.base05, guibg = M.colors.base01, gui = 'none', guisp = nil }
-    hi.PMenuSel                           = { guifg = M.colors.base01, guibg = M.colors.base05, gui = nil, guisp = nil }
+    hi.PMenuSbar                          = { guifg = 'none', guibg = M.colors.base01, gui = 'none', guisp = nil }
+    hi.PMenuSel                           = { guifg = M.colors.base00, guibg = M.colors.base0D, gui = nil, guisp = nil }
+    hi.PMenuThumb                         = { guifg = 'none', guibg = M.colors.base04, gui = nil, guisp = nil }
     hi.TabLine                            = { guifg = M.colors.base03, guibg = M.colors.base01, gui = 'none', guisp = nil }
     hi.TabLineFill                        = { guifg = M.colors.base03, guibg = M.colors.base01, gui = 'none', guisp = nil }
     hi.TabLineSel                         = { guifg = M.colors.base0B, guibg = M.colors.base01, gui = 'none', guisp = nil }
@@ -428,8 +430,8 @@ function M.setup(colors, config)
 
     hi.NvimInternalError = { guifg = M.colors.base00, guibg = M.colors.base08, gui = 'none', guisp = nil }
 
-    hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
-    hi.FloatBorder       = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
+    hi.NormalFloat       = { guifg = M.colors.base05, guibg = M.colors.base01, gui = nil, guisp = nil }
+    hi.FloatBorder       = { guifg = M.colors.base04, guibg = M.colors.base01, gui = nil, guisp = nil }
     hi.NormalNC          = { guifg = M.colors.base05, guibg = M.colors.base00, gui = nil, guisp = nil }
     hi.TermCursor        = { guifg = M.colors.base00, guibg = M.colors.base05, gui = 'none', guisp = nil }
     hi.TermCursorNC      = { guifg = M.colors.base00, guibg = M.colors.base05, gui = nil, guisp = nil }
@@ -519,7 +521,7 @@ function M.setup(colors, config)
         hi.CmpItemAbbrMatch         = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0C, guibg = nil, gui = "underline", guisp = nil }
         hi.CmpItemKindDefault       = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil, fmt="reverse" }
-        hi.CmpItemMenu              = { guifg = M.colors.base04, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemMenu              = { guifg = M.colors.base07, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindKeyword       = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindVariable      = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindConstant      = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
