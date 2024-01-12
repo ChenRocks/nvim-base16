@@ -521,7 +521,7 @@ function M.setup(colors, config)
         hi.CmpItemAbbrMatch         = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemAbbrMatchFuzzy    = { guifg = M.colors.base0C, guibg = nil, gui = "underline", guisp = nil }
         hi.CmpItemKindDefault       = { guifg = M.colors.base05, guibg = nil, gui = nil, guisp = nil, fmt="reverse" }
-        hi.CmpItemMenu              = { guifg = M.colors.base07, guibg = nil, gui = nil, guisp = nil }
+        hi.CmpItemMenu              = { guifg = darken(M.colors.base05, 0.2), guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindKeyword       = { guifg = M.colors.base0C, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindVariable      = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
         hi.CmpItemKindConstant      = { guifg = M.colors.base09, guibg = nil, gui = nil, guisp = nil }
