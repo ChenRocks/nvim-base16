@@ -212,7 +212,7 @@ function M.setup(colors, config)
     hi.Statement                          = { guifg = M.colors.base08, guibg = nil, gui = nil, guisp = nil }
     hi.StorageClass                       = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.String                             = { guifg = M.colors.base0B, guibg = nil, gui = nil, guisp = nil }
-    hi.Structure                          = { guifg = M.colors.base0E, guibg = nil, gui = nil, guisp = nil }
+    hi.Structure                          = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.Tag                                = { guifg = M.colors.base0A, guibg = nil, gui = nil, guisp = nil }
     hi.Todo                               = { guifg = M.colors.base0A, guibg = M.colors.base01, gui = nil, guisp = nil }
     hi.Type                               = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
@@ -293,21 +293,21 @@ function M.setup(colors, config)
     hi.TSConditional                      = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.TSConstant                         = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
     hi.TSConstBuiltin                     = { guifg = M.colors.base09, guibg = nil, gui = 'italic', guisp = nil }
-    hi.TSConstMacro                       = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSConstMacro                       = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.TSError                            = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
     hi.TSException                        = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
     hi.TSField                            = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
     hi.TSFloat                            = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
     hi.TSFunction                         = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
     hi.TSFuncBuiltin                      = { guifg = M.colors.base0C, guibg = nil, gui = 'italic', guisp = nil }
-    hi.TSFuncMacro                        = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSFuncMacro                        = { guifg = M.colors.base0C, guibg = nil, gui = 'none', guisp = nil }
     hi.TSInclude                          = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.TSKeyword                          = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.TSKeywordFunction                  = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.TSKeywordOperator                  = { guifg = M.colors.base0E, guibg = nil, gui = 'none', guisp = nil }
     hi.TSLabel                            = { guifg = M.colors.base0F, guibg = nil, gui = 'none', guisp = nil }
     hi.TSMethod                           = { guifg = M.colors.base0D, guibg = nil, gui = 'none', guisp = nil }
-    hi.TSNamespace                        = { guifg = M.colors.base08, guibg = nil, gui = 'none', guisp = nil }
+    hi.TSNamespace                        = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
     hi.TSNone                             = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
     hi.TSNumber                           = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
     hi.TSOperator                         = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
@@ -333,7 +333,7 @@ function M.setup(colors, config)
     hi.TSLiteral                          = { guifg = M.colors.base09, guibg = nil, gui = 'none', guisp = nil }
     hi.TSURI                              = { guifg = M.colors.base09, guibg = nil, gui = 'underline', guisp = nil }
     hi.TSType                             = { guifg = M.colors.base0A, guibg = nil, gui = 'none', guisp = nil }
-    hi.TSTypeBuiltin                      = { guifg = M.colors.base0A, guibg = nil, gui = 'italic', guisp = nil }
+    hi.TSTypeBuiltin                      = { guifg = M.colors.base09, guibg = nil, gui = 'italic', guisp = nil }
     hi.TSVariable                         = { guifg = M.colors.base05, guibg = nil, gui = 'none', guisp = nil }
     hi.TSVariableBuiltin                  = { guifg = M.colors.base08, guibg = nil, gui = 'italic', guisp = nil }
 
@@ -570,7 +570,7 @@ function M.setup(colors, config)
         hi['@lsp.type.enum'] = 'TSType'
         hi['@lsp.type.interface'] = 'TSType'
         -- hi['@lsp.type.struct'] = '@structure'
-        hi['@lsp.type.parameter'] = 'TSParame'
+        hi['@lsp.type.parameter'] = 'TSParameter'
         hi['@lsp.type.variable'] = 'TSVariable'
         hi['@lsp.type.property'] = 'TSProperty'
         hi['@lsp.type.enumMember'] = 'TSConstBuiltin'
@@ -578,6 +578,9 @@ function M.setup(colors, config)
         hi['@lsp.type.method'] = 'TSMethod'
         hi['@lsp.type.macro'] = 'TSFuncMacro'
         -- hi['@lsp.type.decorator'] = '@function'
+        hi["@lsp.typemod.method.defaultLibrary"] = 'TSFunction'
+        hi["@lsp.typemod.function.defaultLibrary"] = 'TSFunction'
+        hi["@lsp.typemod.variable.defaultLibrary"] = 'TSVariableBuiltin'
     end
 
     if M.config.mini_completion then
