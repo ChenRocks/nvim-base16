@@ -590,7 +590,8 @@ function M.setup(colors, config)
         hi['@lsp.type.interface'] = '@type'
         hi['@lsp.type.struct'] = '@type'
         hi['@lsp.type.parameter'] = '@parameter'
-        hi['@lsp.type.variable'] = '@variable'
+        -- hi['@lsp.type.variable'] = '@variable'
+        hi['@lsp.type.variable'] = {}-- let treesitter handle this, e.g. python's __name__
         hi['@lsp.type.property'] = '@property'
         hi['@lsp.type.enumMember'] = '@constant'
         hi['@lsp.type.function'] = '@function'
